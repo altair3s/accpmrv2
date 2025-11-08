@@ -478,10 +478,10 @@ const handleRemovePassenger = (passengerId) => {
       console.log("🔄 Démarrage du rafraîchissement automatique");
       
       // Premier rafraîchissement
-      setTimeout(refreshData, 2000);
+      setTimeout(refreshData, 20000);
       
       // Rafraîchissement périodique
-      refreshIntervalRef.current = setInterval(refreshData, 10000);
+      refreshIntervalRef.current = setInterval(refreshData, 60000);
       
       return () => {
         if (refreshIntervalRef.current) {
